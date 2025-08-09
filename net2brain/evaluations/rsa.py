@@ -341,6 +341,8 @@ class RSA():
             scan_key = "(" + str(counter) + ") " + roi[:-4]
 
             comp_dic[scan_key] = (tstat, p)
+            print(p)
+            print(p.shape)
             if p < 0.5:
                 sig_pair = sorted(((scan_key, self.model_name), (scan_key, other_RSA.model_name)),
                                   key=lambda element: (element[1]))
